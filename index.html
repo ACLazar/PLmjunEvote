@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PLMun EVote: Your Voice, Your Choice</title>
+</head>
+<body>
+    <label for="username">Email</label>
+    <input type="text" name="Email"><br>
+    <label for="password">Password</label>
+    <input type="password" name="Password"><br>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "dbEvote";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?>
+
+    <br/><br/>
+    <a href="LogIn()">Log In</a>    
+    <a href="add_account.html">Sign Up</a>
+    
+    <script src="LogIn.js"></script>
+</body>
+</html>
